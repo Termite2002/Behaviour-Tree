@@ -1760,13 +1760,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 524558653}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.22950613, y: 0.34205493, z: -0.08654347, w: -0.9071029}
-  m_LocalPosition: {x: 22.542892, y: 19.594994, z: -4.3823223}
+  m_LocalRotation: {x: 0.24125524, y: -0.5610416, z: 0.1752822, w: 0.7722075}
+  m_LocalPosition: {x: 46, y: 25.6, z: 1.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 34.7, y: -72, z: 0}
 --- !u!1 &554263518
 GameObject:
   m_ObjectHideFlags: 0
@@ -2132,7 +2132,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -2158,6 +2158,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   diamond: {fileID: 1550492363}
   van: {fileID: 2004866228}
+  backDoor: {fileID: 919599686}
+  frontDoor: {fileID: 1791870521}
+  money: 800
 --- !u!1 &716268924
 GameObject:
   m_ObjectHideFlags: 0
@@ -2806,6 +2809,7 @@ GameObject:
   - component: {fileID: 919599688}
   - component: {fileID: 919599687}
   - component: {fileID: 919599691}
+  - component: {fileID: 919599692}
   m_Layer: 0
   m_Name: BackDoor
   m_TagString: Untagged
@@ -2906,15 +2910,28 @@ NavMeshObstacle:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919599686}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
   m_Extents: {x: 0.5, y: 0.5, z: 0.5}
   m_MoveThreshold: 0.1
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &919599692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919599686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03cb04feb399b664da49f67d95a205c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLocked: 0
 --- !u!1 &925317490
 GameObject:
   m_ObjectHideFlags: 0
@@ -5677,6 +5694,7 @@ GameObject:
   - component: {fileID: 1791870523}
   - component: {fileID: 1791870522}
   - component: {fileID: 1791870526}
+  - component: {fileID: 1791870527}
   m_Layer: 0
   m_Name: FrontDoor
   m_TagString: Untagged
@@ -5777,15 +5795,28 @@ NavMeshObstacle:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791870521}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
   m_Extents: {x: 0.5, y: 0.5, z: 0.5}
   m_MoveThreshold: 0.1
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &1791870527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791870521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03cb04feb399b664da49f67d95a205c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLocked: 1
 --- !u!4 &1796479289 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a5028766c6c2448878d200bb33de1f59, type: 3}
